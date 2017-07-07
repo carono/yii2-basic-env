@@ -1,6 +1,6 @@
 {
   "name": "carono/yii2-basic-env",
-  "type": "library",
+  "type": "yii2-extension",
   "license": "MIT",
   "authors": [
     {
@@ -8,10 +8,8 @@
       "email": "info@carono.ru"
     }
   ],
-  "scripts": {
-    "post-install-cmd": [
-      "carono\\env\\Environment::copy"
-    ]
+  "extra": {
+    "bootstrap": "carono\\env\\Bootstrap"
   },
   "autoload": {
     "psr-4": {
