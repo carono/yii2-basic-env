@@ -9,7 +9,9 @@ class Bootstrap implements BootstrapInterface
     public function bootstrap($app)
     {
         if ($app instanceof \yii\console\Application) {
-            var_dump(1);
+            if (!isset($app->controllerMap['env'])) {
+                $app->controllerMap['env'] = 'carono\env\EnvController';
+            }
         }
     }
 }
