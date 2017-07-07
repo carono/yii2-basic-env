@@ -9,6 +9,10 @@ class EnvController extends \yii\console\Controller
 {
     public function actionIndex()
     {
+        if (isset(\Yii::$aliases['@backend'])) {
+            Console::output('Not available for "advanced" edition');
+            return;
+        }
         $app = \Yii::getAlias('@app');
         $vendor = \Yii::getAlias('@vendor/carono/yii2-basic-env');
         $src = \Yii::getAlias('@vendor/carono/yii2-basic-env/environments');
