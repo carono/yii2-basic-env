@@ -1,0 +1,22 @@
+{
+  "name": "carono/yii2-basic-env",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "carono",
+      "email": "info@carono.ru"
+    }
+  ],
+  "scripts": {
+    "post-install-cmd": [
+      "carono\\env\\Environment::copy"
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "carono\\env\\": ""
+    }
+  },
+  "require": {}
+}
